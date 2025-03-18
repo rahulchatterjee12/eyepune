@@ -108,7 +108,7 @@ export default function ContactForm() {
       if (!res.ok) {
         throw new Error("Something went wrong");
       }
-      console.log(res)
+      console.log(res);
 
       setSubmitted(true);
     } catch (error) {
@@ -172,15 +172,7 @@ export default function ContactForm() {
           {!submitted ? (
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="
-            space-y-4
-            h-full
-            border rounded-3xl p-10
-            md:w-1/3
-            
-            
-                     
-                        "
+              className="space-y-4 h-full border rounded-3xl p-10 md:w-1/3"
             >
               <div className="md:flex items-center gap-6 ">
                 <FormField
@@ -250,7 +242,7 @@ export default function ContactForm() {
                 render={({ field }) => (
                   <FormItem className="items-center justify-center w-full">
                     <FormLabel className="text-sm bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-                    Services you are interested in
+                      Services you are interested in
                     </FormLabel>
                     <Select
                       onValueChange={field.onChange}
@@ -264,10 +256,12 @@ export default function ContactForm() {
                       <SelectContent>
                         <div className="flex gap-4">
                           <SelectItem value="Mobile App Develoment">
-                          Mobile App Develoment
+                            Mobile App Develoment
                           </SelectItem>
                         </div>
-                        <SelectItem value="Social Media Marketing">Social Media Marketing</SelectItem>
+                        <SelectItem value="Social Media Marketing">
+                          Social Media Marketing
+                        </SelectItem>
                         <SelectItem value="51-200">51-200</SelectItem>
                         <SelectItem value="501-1000">501-1000</SelectItem>
                         <SelectItem value="1000+">1000+</SelectItem>
@@ -290,10 +284,7 @@ export default function ContactForm() {
                       defaultValue={field.value}
                     >
                       <FormControl>
-                        <SelectTrigger
-                        
-                        
-                        >
+                        <SelectTrigger>
                           <SelectValue placeholder="Select an option" />
                         </SelectTrigger>
                       </FormControl>
@@ -363,9 +354,7 @@ export default function ContactForm() {
             </form>
           ) : (
             <>
-              <div
-                className="text-xl md:text-2xl flex items-center justify-center flex-col px-8"
-              >
+              <div className="text-xl md:text-2xl flex items-center justify-center flex-col px-8">
                 <div className="w-80 py-20">
                   <PiSmiley className="text-6xl text-[#6c6684] mx-auto" />
 
