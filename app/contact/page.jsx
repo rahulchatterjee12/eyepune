@@ -60,43 +60,29 @@ const FormSchema = z.object({
   info: z.string(),
 });
 
-type FormValues = {
-  first_name: string;
-  last_name: string;
-  email: string;
-  job_title: string;
-  company_name: string;
-  help: "Evaluate Bird for my company" | "Learn More" | "Get a Quote" | "Other";
-  services:
-    | "Mobile App Develoment"
-    | "Social Media Marketing"
-    | "UI/UX Design"
-    | "Branding"
-    | "Website Development";
-  info: string;
-  terms: boolean;
-};
-
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const { toast } = useToast();
 
-  const form = useForm<FormValues>({
-    resolver: zodResolver(FormSchema),
-    defaultValues: {
-      first_name: "",
-      last_name: "",
-      email: "",
-      job_title: "",
-      company_name: "",
-      help: "Learn More",
-      services: "Mobile App Develoment",
-      info: "",
-    },
-  });
+  const form =
+    useForm <
+    FormValues >
+    {
+      resolver: zodResolver(FormSchema),
+      defaultValues: {
+        first_name: "",
+        last_name: "",
+        email: "",
+        job_title: "",
+        company_name: "",
+        help: "Learn More",
+        services: "Mobile App Develoment",
+        info: "",
+      },
+    };
 
-  async function onSubmit(data: z.infer<typeof FormSchema>) {
+  async function onSubmit(data) {
     try {
       setLoading(true);
       const res = await fetch("/api/contact", {
