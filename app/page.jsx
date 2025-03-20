@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useState, useRef } from "react";
 import Navbar from "@/components/navbar";
@@ -24,11 +24,11 @@ export default function Home() {
     setDropdownVisible(false);
   };
 
-  const websiteDesignRef = useRef<HTMLDivElement>(null);
-  const graphicDesignRef = useRef<HTMLDivElement>(null);
-  const shopifyStoresRef = useRef<HTMLDivElement>(null);
-  const brandsRef = useRef<HTMLDivElement>(null);
-  const servicesRef = useRef<HTMLDivElement>(null);
+  const websiteDesignRef = useRef(null);
+  const graphicDesignRef = useRef(null);
+  const shopifyStoresRef = useRef(null);
+  const brandsRef = useRef(null);
+  const servicesRef = useRef(null);
 
   const scrollToWebsiteDesign = () => {
     websiteDesignRef.current?.scrollIntoView({
@@ -71,7 +71,8 @@ export default function Home() {
           Create, grow, and <br /> scale your business
         </div>
         <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg text-center mx-auto px-4">
-          Custom tailored solutions for your business. We are a team of creatives who are excited to help you grow your business.
+          Custom tailored solutions for your business. We are a team of
+          creatives who are excited to help you grow your business.
         </p>
 
         <Link
@@ -90,14 +91,12 @@ export default function Home() {
         <div ref={graphicDesignRef}>
           <GraphicDesign />
         </div>
-        <div ref={shopifyStoresRef}>
-          {/* <ShopifyStores /> */}
-        </div>
+        <div ref={shopifyStoresRef}>{/* <ShopifyStores /> */}</div>
         <div ref={brandsRef}>
           <Brands />
         </div>
-        <div id ='services'>
-        <Services />
+        <div id="services">
+          <Services />
         </div>
         <InfiniteMovingCardsDemo />
         <FAQS />

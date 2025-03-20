@@ -1,16 +1,11 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 
-type SpotlightProps = {
-  className?: string;
-  fill?: string;
-};
-
-export const Spotlight = ({ className, fill }: SpotlightProps) => {
+export const Spotlight = ({ className, fill }) => {
   return (
     <svg
       className={cn(
-        "animate-spotlight pointer-events-none absolute z-[1]  h-[39%] w-[238%] lg:w-[184%] opacity-0",
+        "animate-spotlight pointer-events-none absolute z-[1] h-[39%] w-[238%] lg:w-[184%] opacity-0",
         className
       )}
       xmlns="http://www.w3.org/2000/svg"

@@ -3,19 +3,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
-export const HoverEffect = ({
-  items,
-  className,
-}: {
-  items: {
-    icon: React.ReactNode;
-    title: string;
-    description: string;
-
-  }[];
-  className?: string;
-}) => {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+export const HoverEffect = ({ items, className }) => {
+  let [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
     <div
@@ -26,7 +15,7 @@ export const HoverEffect = ({
     >
       {items.map((item, idx) => (
         <div
-       key={item?.title}
+          key={item?.title}
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -59,13 +48,7 @@ export const HoverEffect = ({
   );
 };
 
-export const Card = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) => {
+export const Card = ({ className, children }) => {
   return (
     <div
       className={cn(
@@ -79,26 +62,14 @@ export const Card = ({
     </div>
   );
 };
-export const CardTitle = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) => {
+export const CardTitle = ({ className, children }) => {
   return (
     <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
       {children}
     </h4>
   );
 };
-export const CardDescription = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children: React.ReactNode;
-}) => {
+export const CardDescription = ({ className, children }) => {
   return (
     <p
       className={cn(
