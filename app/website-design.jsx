@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import ProjectCard from "@/components/ui/projects/Card";
 
 const WebsiteDesign = () => {
   return (
@@ -15,175 +15,27 @@ const WebsiteDesign = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-10">
-        <div className="grid gap-4 cursor-pointer  hover:scale-[101%] transition-transform duration-300 ease-in-out">
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="/images/web-dev/1.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="/images/web-dev/2.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="/images/web-dev/3.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="/images/web-dev/4.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="grid gap-4 cursor-pointer  hover:scale-[101%] transition-transform duration-300 ease-in-out">
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="/images/web-dev/2.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="/images/web-dev/4.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="/images/web-dev/1.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="/images/web-dev/3.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="grid gap-4 cursor-pointer  hover:scale-[101%] transition-transform duration-300 ease-in-out">
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="/images/web-dev/3.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="/images/web-dev/1.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="/images/web-dev/2.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="/images/web-dev/4.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="grid gap-4 cursor-pointer  hover:scale-[101%] transition-transform duration-300 ease-in-out">
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="/images/web-dev/4.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="/images/web-dev/3.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="/images/web-dev/2.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="/images/web-dev/1.png"
-              alt=""
-            />
-          </div>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
+        <ProjectCard
+          data={{
+            id: 1,
+            color: "from-[#6C0400] to-[#944C00]",
+            title: "Gov. Tender & Construction E-commerce",
+            desc: "I led the creation of our e-commerce supplier portal, streamlining registration, product listing, and management of pricing and stock. I handled all frontend work, utilizing Next.js and technologies like MaterialUI and Tailwind CSS.",
+            img: "https://images.ctfassets.net/lzny33ho1g45/5VGvMMdX169JCk60IJCRDA/358a2d3f62c6028d978efc382cb83ad5/image10.png?w=1400",
+            link: "https://www.runway.org.in",
+          }}
+        />
+        <ProjectCard
+          data={{
+            id: 1,
+            color: "from-[#6C0400] to-[#944C00]",
+            title: "Gov. Tender & Construction E-commerce",
+            desc: "I led the creation of our e-commerce supplier portal, streamlining registration, product listing, and management of pricing and stock. I handled all frontend work, utilizing Next.js and technologies like MaterialUI and Tailwind CSS.",
+            img: "https://images.ctfassets.net/lzny33ho1g45/5VGvMMdX169JCk60IJCRDA/358a2d3f62c6028d978efc382cb83ad5/image10.png?w=1400",
+            link: "https://www.runway.org.in",
+          }}
+        />
       </div>
     </div>
   );

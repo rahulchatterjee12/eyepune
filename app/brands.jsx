@@ -11,22 +11,20 @@ const font = Lora({
 
 const logos = [
   {
-    image: "/logo/logoipsum-248.svg",
+    image:
+      "https://static.wixstatic.com/media/3e1e91_cc87b2c7b5074aa7bf0b588281463438~mv2.jpg/v1/crop/x_18,y_18,w_627,h_464/fill/w_346,h_256,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/7_20240119_153049_0006_edited_edited.jpg",
   },
   {
-    image: "/logo/logoipsum-245.svg",
+    image:
+      "https://static.wixstatic.com/media/3e1e91_2acb7dfbf6a44a21839fb94485658a5e~mv2.jpg/v1/fill/w_356,h_256,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Untitled%20design%20(11)_edited.jpg",
   },
   {
-    image: "/logo/logoipsum-225.svg",
+    image:
+      "https://static.wixstatic.com/media/3e1e91_3d2865ae41724d36807ee7d6d8cd65fb~mv2.png/v1/fill/w_355,h_256,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Untitled%20(Logo)%20(5)%20(1).png",
   },
   {
-    image: "/logo/logoipsum-248.svg",
-  },
-  {
-    image: "/logo/logoipsum-249.svg",
-  },
-  {
-    image: "/logo/stripelogo.png",
+    image:
+      "https://static.wixstatic.com/media/3e1e91_c74587e304724b28a8c6133bac6dbab5~mv2.jpg/v1/crop/x_0,y_61,w_500,h_367/fill/w_356,h_256,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/3e1e91_c74587e304724b28a8c6133bac6dbab5~mv2.jpg",
   },
 ];
 
@@ -46,16 +44,14 @@ const Brands = () => {
           brands elevate their business.
         </p>
 
-        <div className="grid grid-cols-3  items-center justify-center  mx-auto md:w-3/5 cursor-pointer">
+        <div className="grid grid-cols-3  items-center justify-center  mx-auto md:w-4/5 cursor-pointer">
           {logos.map((logo, i) => (
-            <div key={i} className="p-4 md:p-20">
-              <Image
+            <div key={i} className="p-4 md:p-8">
+              <img
                 priority
                 src={logo.image}
-                width={500}
-                height={500}
                 alt="logo"
-                className="w-full h-auto max-w-full rounded-lg"
+                className="w-[80%] md:w-[40%] rounded-lg"
               />
             </div>
           ))}
