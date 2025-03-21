@@ -38,9 +38,7 @@ const SliderOne = () => {
               alt="logo"
               width={500}
               height={500}
-              className="
-                  rounded-2xl
-                      "
+              className="rounded-2xl"
             />
           </div>
         </>
@@ -53,9 +51,7 @@ const SliderOne = () => {
               alt="logo"
               width={500}
               height={500}
-              className="
-                  rounded-2xl 
-                      "
+              className="rounded-2xl"
             />
           </div>
         </>
@@ -68,9 +64,7 @@ const SliderOne = () => {
               alt="logo"
               width={500}
               height={500}
-              className="
-                  rounded-2xl 
-                      "
+              className="rounded-2xl"
             />
           </div>
         </>
@@ -83,9 +77,7 @@ const SliderOne = () => {
               alt="logo"
               width={500}
               height={500}
-              className="
-                  rounded-2xl 
-                      "
+              className="rounded-2xl"
             />
           </div>
         </>
@@ -98,9 +90,7 @@ const SliderOne = () => {
               alt="logo"
               width={500}
               height={500}
-              className="
-                  rounded-2xl 
-                      "
+              className="rounded-2xl"
             />
           </div>
         </>

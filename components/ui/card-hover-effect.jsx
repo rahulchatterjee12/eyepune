@@ -7,12 +7,7 @@ export const HoverEffect = ({ items, className }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div
-      className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
-        className
-      )}
-    >
+    <div className={cn("grid grid-cols-1 md:grid-cols-2  py-10", className)}>
       {items.map((item, idx) => (
         <div
           key={item?.title}
@@ -64,7 +59,12 @@ export const Card = ({ className, children }) => {
 };
 export const CardTitle = ({ className, children }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
+    <h4
+      className={cn(
+        "text-zinc-100 font-bold tracking-wide mt-4 text-[22px]",
+        className
+      )}
+    >
       {children}
     </h4>
   );
@@ -73,7 +73,7 @@ export const CardDescription = ({ className, children }) => {
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-md",
         className
       )}
     >

@@ -20,16 +20,8 @@ let pages = [
     href: "/lead-generation",
   },
   {
-    title: "Pricing",
-    href: "/pricing",
-  },
-  {
     title: "About Us",
     href: "/about",
-  },
-  {
-    title: "Contact",
-    href: "/contact",
   },
 ];
 

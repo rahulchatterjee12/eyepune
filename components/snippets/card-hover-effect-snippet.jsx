@@ -3,7 +3,7 @@ import { PiAppStoreLogo, PiLock, PiMegaphone, PiMonitor } from "react-icons/pi";
 
 export function CardHoverEffectDemo() {
   return (
-    <div className="max-w-5xl mx-auto px-8">
+    <div className="w-[60vw] mx-auto">
       <HoverEffect items={projects} />
     </div>
   );

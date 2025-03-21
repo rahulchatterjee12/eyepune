@@ -188,11 +188,29 @@ export default function ContactForm() {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="Mobile App Development">
-                          Mobile App Development
+                        <SelectItem value="Mobile App UI/UX Design & Development">
+                          Mobile App UI/UX Design & Development
                         </SelectItem>
                         <SelectItem value="Social Media Marketing">
                           Social Media Marketing
+                        </SelectItem>
+                        <SelectItem value="Custom Website Development">
+                          Custom Website Development
+                        </SelectItem>
+                        <SelectItem value="Web UI/UX Design">
+                          Web UI/UX Design
+                        </SelectItem>
+                        <SelectItem value="Wordpress, Wix & Shopify Website Development">
+                          Wordpress, Wix & Shopify Website Development
+                        </SelectItem>
+                        <SelectItem value="Lead Generation & SEO">
+                          Lead Generation & SEO
+                        </SelectItem>
+                        <SelectItem value="Performance Marketing">
+                          Performance Marketing
+                        </SelectItem>
+                        <SelectItem value="Graphic Design">
+                          Graphic Design
                         </SelectItem>
                       </SelectContent>
                     </Select>

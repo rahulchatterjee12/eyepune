@@ -6,6 +6,16 @@ import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 export function InfiniteMovingCardsDemo() {
   return (
     <div className="pb-40 rounded-md flex flex-col antialiased my-4 dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+      <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
+        <div className="text-4xl  md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-[#c5343a] to-[#691215] bg-opacity-50">
+          Website Design <br /> that works
+        </div>
+        <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg text-center mx-auto px-4">
+          Creating, designing and developing websites that work for your
+          business.
+        </p>
+      </div>
+
       <InfiniteMovingCards
         items={testimonials}
         direction="right"
