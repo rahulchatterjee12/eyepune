@@ -122,7 +122,7 @@ export default function ContactForm() {
                   name="first_name"
                   render={({ field }) => (
                     <FormItem className="w-full">
-                      <FormLabel className="text-sm text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                      <FormLabel className="text-sm text-white">
                         First name *
                       </FormLabel>
                       <FormControl>
@@ -137,7 +137,7 @@ export default function ContactForm() {
                   name="last_name"
                   render={({ field }) => (
                     <FormItem className="w-full">
-                      <FormLabel className="text-sm text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                      <FormLabel className="text-sm text-white">
                         Last name *
                       </FormLabel>
                       <FormControl>
@@ -153,7 +153,7 @@ export default function ContactForm() {
                 name="email"
                 render={({ field }) => (
                   <FormItem className="w-full">
-                    <FormLabel className="text-sm text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                    <FormLabel className="text-sm text-white">
                       Email *
                     </FormLabel>
                     <FormControl>
@@ -168,7 +168,7 @@ export default function ContactForm() {
                 name="company_name"
                 render={({ field }) => (
                   <FormItem className="w-full">
-                    <FormLabel className="text-sm text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                    <FormLabel className="text-sm text-white">
                       Company name?
                     </FormLabel>
                     <FormControl>
@@ -183,7 +183,7 @@ export default function ContactForm() {
                 name="services"
                 render={({ field }) => (
                   <FormItem className="w-full">
-                    <FormLabel className="text-sm text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                    <FormLabel className="text-sm text-white">
                       Services you are interested in
                     </FormLabel>
                     <Select
@@ -213,7 +213,7 @@ export default function ContactForm() {
                 name="info"
                 render={({ field }) => (
                   <FormItem className="w-full">
-                    <FormLabel className="text-sm text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                    <FormLabel className="text-sm text-white">
                       Anything else?
                     </FormLabel>
                     <FormControl>
@@ -225,7 +225,7 @@ export default function ContactForm() {
 
               <div className="flex gap-4 items-center">
                 <Checkbox />
-                <div className="text-xs font-light text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                <div className="text-sm text-white">
                   I agree to Bird&apos; sending marketing communications related
                   to Bird
                 </div>
