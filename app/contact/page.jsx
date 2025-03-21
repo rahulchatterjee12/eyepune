@@ -226,8 +226,8 @@ export default function ContactForm() {
               <div className="flex gap-4 items-center">
                 <Checkbox />
                 <div className="text-sm text-white">
-                  I agree to Bird&apos; sending marketing communications related
-                  to Bird
+                  I agree to EyePune&apos; sending marketing communications
+                  related to EyePune
                 </div>
               </div>
 
