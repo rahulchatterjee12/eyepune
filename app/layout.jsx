@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         suppressHydrationWarning={true}
-        className={`${font.className} w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02]`}
+        className={`${font.className} w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] overflow-x-hidden`}
       >
         <Analytics />
         <Navbar />
