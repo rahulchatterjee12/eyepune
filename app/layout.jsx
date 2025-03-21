@@ -2,6 +2,8 @@ import { Analytics } from "@vercel/analytics/react";
 
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar";
+import { Spotlight } from "@/components/ui/spotlight";
 
 const font = Poppins({ subsets: ["latin"], weight: "400" });
 
@@ -13,9 +15,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true} className={font.className}>
+      <body
+        suppressHydrationWarning={true}
+        className={`${font.className} w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02]`}
+      >
         <Analytics />
-        {children}
+        <Navbar />
+        <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
+          <Spotlight
+            className="hidden md:flex md:-top-80 left-80"
+            fill="white"
+          />
+          {children}
+        </div>
       </body>
     </html>
   );

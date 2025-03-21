@@ -5,14 +5,9 @@ import { AlignJustify, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import DropDownMenu from "./drop-down-menu";
+import { pages } from "@/components/constant";
 
-const Navbar = ({
-  scrollToWebsiteDesign,
-  scrollToGraphicDesign,
-  scrollToShopifyStores,
-  scrollToBrands,
-  scrollToServices, // Add scrollToServices to props
-}) => {
+const Navbar = () => {
   const [isDropDownVisible, setIsDropDownVisible] = useState(false);
 
   const toggleDropDown = () => {
@@ -47,23 +42,15 @@ const Navbar = ({
              bg-gradient-to-b from-neutral-50
               to bg-neutral-400 bg-opacity-50"
         >
-          <div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
-            Website Design
-          </div>
-          <div onClick={scrollToGraphicDesign} className="hover:text-gray-50">
-            Graphic Design
-          </div>
-
-          <div onClick={scrollToShopifyStores} className="hover:text-gray-50">
-            Shopify Stores
-          </div>
-          <div onClick={scrollToBrands} className="hover:text-gray-50">
-            Brands
-          </div>
-
-          <Link href="/pricing" className="hover:text-gray-50">
-            Pricing
-          </Link>
+          {pages.map((page) => (
+            <Link
+              key={page.href}
+              href={page.href}
+              className="hover:text-gray-50"
+            >
+              {page.title}
+            </Link>
+          ))}
         </div>
 
         <div className="flex md:hidden">
@@ -74,10 +61,7 @@ const Navbar = ({
               className="w-8 h-8 text-slate-300 cursor-pointer"
             >
               <X />
-              <DropDownMenu
-                onClose={closeDropDown}
-                scrollToServices={scrollToServices} // Pass scrollToServices
-              />
+              <DropDownMenu onClose={closeDropDown} />
             </div>
           ) : (
             <AlignJustify

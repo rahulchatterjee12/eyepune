@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { pages } from "@/components/constant";
 
 const DropDownMenu = ({ onClose, scrollToServices }) => {
   return (
@@ -27,21 +28,15 @@ const DropDownMenu = ({ onClose, scrollToServices }) => {
       transition={{ duration: 0.5 }}
     >
       <div className="flex-col flex space-y-10">
-        <Link href="/pricing" className="text-black text-2xl">
-          Pricing
-        </Link>
-        <Link href="/contact" className="text-black text-2xl">
-          Contact
-        </Link>
-
-        <Link href="/book" className="text-black text-2xl">
-          Book a call
-        </Link>
-
-        {/* Add onClick handler to Services link */}
-        <Link href="/#services" className="cursor-pointer text-black text-2xl">
-          Services
-        </Link>
+        {pages.map((page) => (
+          <Link
+            key={page.href}
+            href={page.href}
+            className="cursor-pointer text-black text-2xl"
+          >
+            {page.title}
+          </Link>
+        ))}
       </div>
     </motion.div>
   );

@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/ui/slider.jsx", "app/contact/page.jsx", "app/book/page.jsx", "app/faq.jsx", "app/brands.jsx", "app/snippets/infinite-moving-card-snippet.jsx", "app/snippets/evervault-card-snippet.jsx", "app/snippets/card-hover-effect-snippet.jsx", "app/snippets/3d-card-snippet.jsx", "app/pricing/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/ui/slider.jsx", "app/contact/page.jsx", "app/book/page.jsx", "components/faq.jsx", "components/brands.jsx", "components/snippets/infinite-moving-card-snippet.jsx", "components/snippets/evervault-card-snippet.jsx", "components/snippets/card-hover-effect-snippet.jsx", "components/snippets/3d-card-snippet.jsx", "app/pricing/page.jsx"],
   "exclude": ["node_modules"]
 }
