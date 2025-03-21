@@ -24,7 +24,6 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
 import { PiSmiley } from "react-icons/pi";
-import Navbar from "@/components/navbar";
 
 const FormSchema = z.object({
   first_name: z.string(),
@@ -93,13 +92,6 @@ export default function ContactForm() {
 
   return (
     <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
-      <Navbar
-        scrollToWebsiteDesign={() => {}}
-        scrollToGraphicDesign={() => {}}
-        scrollToShopifyStores={() => {}}
-        scrollToBrands={() => {}}
-        scrollToServices={() => {}}
-      />
       <div className="md:flex items-start justify-center md:py-20 px-6">
         <div>
           <div className="text-5xl font-medium w-full md:w-2/3 pb-5 md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
