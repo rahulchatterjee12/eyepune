@@ -29,7 +29,7 @@ const AccordionTrigger = forwardRef(
         {...props}
       >
         {children}
-        <PlusCircle className="h-8 w-8 md:h-10 md:w-10 shrink-0 transition-transform duration-200" />
+        <PlusCircle className="h-8 w-8 md:h-10 md:w-10 shrink-0 transition-transform duration-200 text-[#c5343a]" />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   )

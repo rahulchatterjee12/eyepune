@@ -27,7 +27,7 @@ const Navbar = ({
     <div>
       <div className="p-6 md:p-10 flex items-center justify-between z-50">
         <div>
-          <Link className="cursor-pointer" href="/">
+          <Link className="cursor-pointer flex gap-4 items-center " href="/">
             <Image
               priority
               src="/logo/logo.svg"
@@ -36,6 +36,7 @@ const Navbar = ({
               height={100}
               className="w-10 h-10 md:w-14 md:h-14"
             />
+            <span className="text-white font-bold md:text-xl">EyePune</span>
           </Link>
         </div>
         <div

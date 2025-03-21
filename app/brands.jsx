@@ -34,7 +34,7 @@ const Brands = () => {
       <div className=" p-4   mx-auto relative z-10  w-full pt-20 md:pt-32">
         <div
           className="text-4xl md:pb-8 md:text-7xl text-center 
-        bg-clip-text text-transparent bg-gradient-to-b from-purple-500 to-sky-200 bg-opacity-50"
+        bg-clip-text text-transparent bg-gradient-to-b from-[#c5343a] to-[#e3a5a7] bg-opacity-50"
         >
           The best brands <br /> choose us
         </div>
@@ -48,7 +48,6 @@ const Brands = () => {
           {logos.map((logo, i) => (
             <div key={i} className="p-4 md:p-8">
               <img
-                priority
                 src={logo.image}
                 alt="logo"
                 className="w-[80%] md:w-[40%] rounded-lg"
