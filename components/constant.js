@@ -20,6 +20,10 @@ let pages = [
     href: "/lead-generation",
   },
   {
+    title: "Blogs",
+    href: "/blogs",
+  },
+  {
     title: "About Us",
     href: "/about",
   },
