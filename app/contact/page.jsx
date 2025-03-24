@@ -98,7 +98,7 @@ export default function ContactForm() {
             Contact our sales team
           </div>
           <div className="py-4 text-gray-300">
-            Let&apos;s talk about how Bird can help your team work better.
+            Let&#39;s talk about how Bird can help your team work better.
           </div>
         </div>
 
@@ -236,7 +236,7 @@ export default function ContactForm() {
               <div className="flex gap-4 items-center">
                 <Checkbox />
                 <div className="text-sm text-white">
-                  I agree to EyePune&apos; sending marketing communications
+                  I agree to EyePune&#39;s sending marketing communications
                   related to EyePune
                 </div>
               </div>
@@ -250,8 +250,8 @@ export default function ContactForm() {
               <div className="w-80 py-20">
                 <PiSmiley className="text-6xl text-[#6c6684] mx-auto" />
                 <div className="text-gray-500 font-light text-center py-10">
-                  We&apos;ve received your inquiry and will be contacting you
-                  via email shortly.
+                  We&#39;ve received your inquiry and will be contacting you via
+                  email shortly.
                 </div>
               </div>
             </div>

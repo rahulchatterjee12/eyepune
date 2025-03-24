@@ -12,7 +12,7 @@ export function InfiniteMovingCardsDemo() {
         </div>
         <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg text-center mx-auto px-4">
           We are proud to have worked with some of the best clients in the
-          world. Here's what they have to say about us.
+          world. Here&#39;s what they have to say about us.
         </p>
       </div>
 
@@ -34,7 +34,7 @@ const testimonials = [
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
+      "To be, or not to be, that is the question: Whether this nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
     name: "William Shakespeare",
     title: "Hamlet",
   },

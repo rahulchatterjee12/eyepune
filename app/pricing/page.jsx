@@ -45,7 +45,7 @@ const plans = [
     index: 2,
     name: "Enterprise",
     feature: "Contact Us",
-    price: "Let's Talk!",
+    price: "Let&#39;s Talk!",
     features: [
       "Fully responsive on all screens",
       "React / Next.js / Tailwind CSS code",
