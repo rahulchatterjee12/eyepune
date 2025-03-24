@@ -1,11 +1,89 @@
 import React from "react";
 import { Meteors } from "@/components/ui/projects/meteors";
+import { PiCheckCircleDuotone } from "react-icons/pi";
 
 const items = new Array(6).fill(0);
 
+const story = [
+  {
+    date: "2023 - Present",
+    title: "Web Designer & Web Developer",
+    description:
+      "The company has high expectations and using OKRs there is a mutual understanding of expectations and performance.",
+    details: [
+      "Designed template UIs and design systems in Figma.",
+      "Converted UIs into responsive HTML and CSS with a mobile-first approach.",
+      "Created custom illustrations and item description banners.",
+      "Provided detailed documentation and customer support on GitHub.",
+      "Engaged with users to address setup inquiries, bug issues, and feedback.",
+    ],
+  },
+  {
+    date: "2021 - 2023",
+    title: "Frontend Developer",
+    description:
+      "Worked on developing interactive and dynamic web applications using React and Next.js.",
+    details: [
+      "Developed reusable React components.",
+      "Implemented performance optimizations and SEO improvements.",
+      "Integrated third-party APIs and services.",
+      "Collaborated with designers to ensure UI/UX consistency.",
+      "Wrote unit tests to maintain code reliability.",
+    ],
+  },
+  {
+    date: "2021 - 2023",
+    title: "Frontend Developer",
+    description:
+      "Worked on developing interactive and dynamic web applications using React and Next.js.",
+    details: [
+      "Developed reusable React components.",
+      "Implemented performance optimizations and SEO improvements.",
+      "Integrated third-party APIs and services.",
+      "Collaborated with designers to ensure UI/UX consistency.",
+      "Wrote unit tests to maintain code reliability.",
+    ],
+  },
+  {
+    date: "2021 - 2023",
+    title: "Frontend Developer",
+    description:
+      "Worked on developing interactive and dynamic web applications using React and Next.js.",
+    details: [
+      "Developed reusable React components.",
+      "Implemented performance optimizations and SEO improvements.",
+      "Integrated third-party APIs and services.",
+      "Collaborated with designers to ensure UI/UX consistency.",
+      "Wrote unit tests to maintain code reliability.",
+    ],
+  },
+];
+
 const page = () => {
   return (
-    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <div class="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto">
+      <div class="relative overflow-hidden  text-white py-16">
+        <div class="relative z-10">
+          <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl text-center mx-auto">
+              <p class="inline-block text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-[#9c3034] to-[#e6171e]">
+                About EyePune - Digital Excellence Redefined
+              </p>
+
+              <div class="mt-5 max-w-3xl">
+                <p class="text-lg text-gray-300">
+                  At <span class="font-semibold text-white">EyePune</span>, we
+                  transform ideas into reality with innovative web development,
+                  lead generation, and UI/UX solutions. Our expertise in digital
+                  marketing and application development ensures businesses scale
+                  to new heights.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="bg-gray-900 border border-gray-800 mb-10 lg:mb-14 rounded-xl p-6 lg:p-8">
         <div class="max-w-5xl px-4 xl:px-0 py-10 mx-auto">
           <div class="border border-neutral-800 rounded-xl">
@@ -98,6 +176,38 @@ const page = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div>
+        {story.map((item, index) => (
+          <div key={index} className="group relative flex gap-x-5">
+            {/* Icon */}
+            <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 ">
+              <div className="relative z-10 size-6 flex justify-center items-center">
+                <PiCheckCircleDuotone color="#691215" size={30} />
+              </div>
+            </div>
+
+            {/* Right Content */}
+            <div className="grow pb-8 group-last:pb-0">
+              <h3 className="mb-1 text-xs text-white">{item.date}</h3>
+              <p className="font-semibold text-sm text-gray-500">
+                {item.title}
+              </p>
+              <p className="mt-1 text-sm text-gray-300">{item.description}</p>
+
+              {item.details && (
+                <ul className="list-disc ms-6 mt-3 space-y-1.5">
+                  {item.details.map((detail, i) => (
+                    <li key={i} className="ps-1 text-sm text-gray-400">
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
 
       <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
