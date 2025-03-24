@@ -3,7 +3,7 @@ export default function LeadGeneration() {
     <div className="relative overflow-hidden text-white py-16">
       <div className="relative z-10 max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl text-center mx-auto">
-          <p class="inline-block text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-[#9c3034] to-[#e6171e]">
+          <p className="inline-block text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-[#9c3034] to-[#e6171e]">
             EyePune - Lead Generation
           </p>
           <h1 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-semibold text-white">
