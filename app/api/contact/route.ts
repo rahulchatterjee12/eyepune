@@ -13,18 +13,18 @@ export async function POST(req:any) {
     }
 
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
+      host: "smtp.zoho.com",
       port: 465,
       secure: true,
       auth: {
-        user: process.env.EMAIL_USER, // Use env variables
+        user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
     });
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "rahulchatterjee941@gmail.com",
+      to: "support@eyepune.com",
       subject: "Contact Form Submission",
       html: `
         <h1>Contact Form</h1>
