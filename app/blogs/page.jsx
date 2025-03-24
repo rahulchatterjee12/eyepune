@@ -47,7 +47,7 @@ const blogPosts = [
 
 export default function Blogs() {
   return (
-    <div className="relative overflow-hidden bg-gray-900 text-white min-h-screen py-16">
+    <div className="relative overflow-hidden text-white min-h-screen py-16">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <motion.p
           className="text-sm font-medium bg-clip-text text-transparent bg-gradient-to-l from-blue-400 to-violet-400"

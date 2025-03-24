@@ -48,7 +48,7 @@ export default function BlogView() {
 
   return (
     <motion.div
-      className="relative overflow-hidden bg-gray-900 text-white min-h-screen py-16"
+      className="relative overflow-hidden  text-white min-h-screen py-16"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}

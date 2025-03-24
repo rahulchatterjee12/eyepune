@@ -1,8 +1,8 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import { Meteors } from "@/components/ui/projects/meteors";
 import { PiCheckCircleDuotone } from "react-icons/pi";
-
-const items = new Array(6).fill(0);
 
 const story = [
   {
@@ -31,164 +31,128 @@ const story = [
       "Wrote unit tests to maintain code reliability.",
     ],
   },
+];
+
+const items = [
   {
-    date: "2021 - 2023",
-    title: "Frontend Developer",
+    name: "David Forren",
+    role: "Founder / CEO",
+    image:
+      "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
     description:
-      "Worked on developing interactive and dynamic web applications using React and Next.js.",
-    details: [
-      "Developed reusable React components.",
-      "Implemented performance optimizations and SEO improvements.",
-      "Integrated third-party APIs and services.",
-      "Collaborated with designers to ensure UI/UX consistency.",
-      "Wrote unit tests to maintain code reliability.",
-    ],
+      "I am an ambitious workaholic, but apart from that, a pretty simple person.",
   },
   {
-    date: "2021 - 2023",
-    title: "Frontend Developer",
-    description:
-      "Worked on developing interactive and dynamic web applications using React and Next.js.",
-    details: [
-      "Developed reusable React components.",
-      "Implemented performance optimizations and SEO improvements.",
-      "Integrated third-party APIs and services.",
-      "Collaborated with designers to ensure UI/UX consistency.",
-      "Wrote unit tests to maintain code reliability.",
-    ],
+    name: "Jane Doe",
+    role: "CTO",
+    image: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61",
+    description: "Tech enthusiast and problem solver.",
+  },
+  {
+    name: "Michael Smith",
+    role: "Lead Designer",
+    image:
+      "https://images.unsplash.com/photo-1546967191-fdfb13ed6b1e?crop=faces&fit=crop&w=320&h=320",
+    description: "Passionate about creating stunning user experiences.",
   },
 ];
 
+const fadeIn = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 1 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
+};
+
+const containerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0.9, y: 30 },
+  visible: (i) => ({
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.5, ease: "easeOut" },
+  }),
+};
+
 const page = () => {
   return (
-    <div className="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto">
-      <div className="relative overflow-hidden  text-white py-16">
-        <div className="relative z-10">
-          <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-2xl text-center mx-auto">
-              <p className="inline-block text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-[#9c3034] to-[#e6171e]">
-                About EyePune - Digital Excellence Redefined
+    <motion.div
+      className="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto"
+      initial="hidden"
+      animate="visible"
+      variants={staggerContainer}
+    >
+      {/* Hero Section */}
+      <motion.div
+        className="relative overflow-hidden text-white py-16"
+        variants={fadeIn}
+      >
+        <div className="relative z-10 text-center mx-auto max-w-2xl">
+          <p className="inline-block text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-[#9c3034] to-[#e6171e]">
+            About EyePune - Digital Excellence Redefined
+          </p>
+          <p className="mt-5 text-lg text-gray-300">
+            At <span className="font-semibold text-white">EyePune</span>, we
+            transform ideas into reality with innovative web development, lead
+            generation, and UI/UX solutions. Our expertise in digital marketing
+            and application development ensures businesses scale to new heights.
+          </p>
+        </div>
+      </motion.div>
+
+      {/* Stats Section */}
+      <motion.div
+        className="bg-gray-900 border border-gray-800 mb-10 lg:mb-14 rounded-xl p-6 lg:p-8"
+        variants={fadeIn}
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-10 gap-x-12 text-center">
+          {[
+            { title: "2,000+", subtitle: "Preline partners" },
+            { title: "85%", subtitle: "Happy customers" },
+            { title: "$55M+", subtitle: "Ads managed yearly" },
+          ].map((stat, index) => (
+            <motion.div
+              key={index}
+              className="relative"
+              whileHover={{ scale: 1.1 }}
+              variants={fadeIn}
+            >
+              <h3 className="text-3xl font-semibold text-white">
+                {stat.title}
+              </h3>
+              <p className="mt-1 text-sm sm:text-base text-neutral-400">
+                {stat.subtitle}
               </p>
-
-              <div className="mt-5 max-w-3xl">
-                <p className="text-lg text-gray-300">
-                  At <span className="font-semibold text-white">EyePune</span>,
-                  we transform ideas into reality with innovative web
-                  development, lead generation, and UI/UX solutions. Our
-                  expertise in digital marketing and application development
-                  ensures businesses scale to new heights.
-                </p>
-              </div>
-            </div>
-          </div>
+            </motion.div>
+          ))}
         </div>
-      </div>
+      </motion.div>
 
-      <div className="bg-gray-900 border border-gray-800 mb-10 lg:mb-14 rounded-xl p-6 lg:p-8">
-        <div className="max-w-5xl px-4 xl:px-0 py-10 mx-auto">
-          <div className="border border-neutral-800 rounded-xl">
-            <div className="p-4 lg:p-8 bg-linear-to-bl from-neutral-800 via-neutral-900 to-neutral-950 rounded-xl">
-              <div className="grid grid-cols-1 sm:grid-cols-3 items-center gap-y-20 gap-x-12">
-                <div className="relative text-center first:before:hidden before:absolute before:-top-full sm:before:top-1/2 before:start-1/2 sm:before:-start-6 before:w-px before:h-20 before:bg-neutral-800 before:rotate-[60deg] sm:before:rotate-12 before:transform sm:before:-translate-y-1/2 before:-translate-x-1/2 sm:before:-translate-x-0 before:mt-3.5 sm:before:mt-0">
-                  <svg
-                    className="shrink-0 size-6 sm:size-8 text-[#ff0] mx-auto"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="m11 17 2 2a1 1 0 1 0 3-3" />
-                    <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" />
-                    <path d="m21 3 1 11h-2" />
-                    <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" />
-                    <path d="M3 4h8" />
-                  </svg>
-                  <div className="mt-3 sm:mt-5">
-                    <h3 className="text-lg sm:text-3xl font-semibold text-white">
-                      2,000+
-                    </h3>
-                    <p className="mt-1 text-sm sm:text-base text-neutral-400">
-                      Preline partners
-                    </p>
-                  </div>
-                </div>
-                <div className="relative text-center first:before:hidden before:absolute before:-top-full sm:before:top-1/2 before:start-1/2 sm:before:-start-6 before:w-px before:h-20 before:bg-neutral-800 before:rotate-[60deg] sm:before:rotate-12 before:transform sm:before:-translate-y-1/2 before:-translate-x-1/2 sm:before:-translate-x-0 before:mt-3.5 sm:before:mt-0">
-                  <div className="flex justify-center items-center -space-x-5">
-                    <img
-                      className="relative z-2 shrink-0 size-8 rounded-full border-3 border-neutral-800"
-                      src="https://images.unsplash.com/photo-1601935111741-ae98b2b230b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                      alt="Avatar"
-                    />
-                    <img
-                      className="relative z-1 shrink-0 size-8 rounded-full border-3 border-neutral-800 -mt-7"
-                      src="https://images.unsplash.com/photo-1570654639102-bdd95efeca7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                      alt="Avatar"
-                    />
-                    <img
-                      className="relative shrink-0 size-8 rounded-full border-3 border-neutral-800"
-                      src="https://images.unsplash.com/photo-1679412330254-90cb240038c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2.5&w=320&h=320&q=80"
-                      alt="Avatar"
-                    />
-                  </div>
-                  <div className="mt-3 sm:mt-5">
-                    <h3 className="text-lg sm:text-3xl font-semibold text-white">
-                      85%
-                    </h3>
-                    <p className="mt-1 text-sm sm:text-base text-neutral-400">
-                      Happy customers
-                    </p>
-                  </div>
-                </div>
-                <div className="relative text-center first:before:hidden before:absolute before:-top-full sm:before:top-1/2 before:start-1/2 sm:before:-start-6 before:w-px before:h-20 before:bg-neutral-800 before:rotate-[60deg] sm:before:rotate-12 before:transform sm:before:-translate-y-1/2 before:-translate-x-1/2 sm:before:-translate-x-0 before:mt-3.5 sm:before:mt-0">
-                  <svg
-                    className="shrink-0 size-6 sm:size-8 text-[#ff0] mx-auto"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17" />
-                    <path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9" />
-                    <path d="m2 16 6 6" />
-                    <circle cx="16" cy="9" r="2.9" />
-                    <circle cx="6" cy="5" r="3" />
-                  </svg>
-                  <div className="mt-3 sm:mt-5">
-                    <h3 className="text-lg sm:text-3xl font-semibold text-white">
-                      $55M+
-                    </h3>
-                    <p className="mt-1 text-sm sm:text-base text-neutral-400">
-                      Ads managed yearly
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div>
+      {/* Timeline Section */}
+      <motion.div className="space-y-10" variants={staggerContainer}>
         {story.map((item, index) => (
-          <div key={index} className="group relative flex gap-x-5">
-            {/* Icon */}
-            <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 ">
-              <div className="relative z-10 size-6 flex justify-center items-center">
+          <motion.div
+            key={index}
+            className="group relative flex gap-x-5"
+            variants={fadeIn}
+          >
+            <div className="relative group-last:after:hidden after:absolute after:top-8 after:bottom-2 after:start-3 after:w-px after:bg-gray-200">
+              <motion.div
+                className="relative z-10 size-6 flex justify-center items-center"
+                whileHover={{ scale: 1.2 }}
+              >
                 <PiCheckCircleDuotone color="#691215" size={30} />
-              </div>
+              </motion.div>
             </div>
 
-            {/* Right Content */}
             <div className="grow pb-8 group-last:pb-0">
               <h3 className="mb-1 text-xs text-white">{item.date}</h3>
               <p className="font-semibold text-sm text-gray-500">
@@ -199,52 +163,69 @@ const page = () => {
               {item.details && (
                 <ul className="list-disc ms-6 mt-3 space-y-1.5">
                   {item.details.map((detail, i) => (
-                    <li key={i} className="ps-1 text-sm text-gray-400">
+                    <motion.li
+                      key={i}
+                      className="ps-1 text-sm text-gray-400"
+                      variants={fadeIn}
+                    >
                       {detail}
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
               )}
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
-      <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
-        <h2 className="text-2xl font-bold md:text-4xl md:leading-tight text-white">
-          Our Team
-        </h2>
-        <p className="mt-1 text-gray-600">Creative people</p>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {items.map((item, i) => (
-          <div
-            key={i}
-            className="relative overflow-hidden flex flex-col rounded-xl p-4 md:p-6 bg-gray-900 border border-gray-800"
-          >
-            <div className="flex items-center gap-x-4">
-              <img
-                className="rounded-full size-20"
-                src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                alt="Avatar"
+      <section className="py-16">
+        <motion.div
+          className="max-w-2xl mx-auto text-center mb-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+        >
+          <h2 className="text-3xl font-bold text-white md:text-4xl">
+            Meet Our Team
+          </h2>
+          <p className="mt-2 text-gray-400">
+            Creative minds behind our success
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {items.map((item, i) => (
+            <motion.div
+              key={i}
+              className="relative overflow-hidden flex flex-col items-center text-center bg-gray-800 border border-gray-700 rounded-lg p-6 shadow-lg"
+              custom={i}
+              variants={itemVariants}
+            >
+              <motion.img
+                className="rounded-full w-24 h-24 border-4 border-gray-600"
+                src={item.image}
+                alt={item.name}
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.4, delay: i * 0.2 }}
               />
-              <div className="grow">
-                <h3 className="font-medium text-gray-300">David Forren</h3>
-                <p className="text-xs uppercase text-gray-500">Founder / CEO</p>
-              </div>
-            </div>
-
-            <p className="mt-3 text-gray-500">
-              I am an ambitious workaholic, but apart from that, pretty simple
-              person.
-            </p>
-
-            <div className="mt-3 space-x-1"></div>
-            <Meteors number={15} />
-          </div>
-        ))}
-      </div>
-    </div>
+              <h3 className="mt-4 text-lg font-semibold text-white">
+                {item.name}
+              </h3>
+              <p className="text-xs text-gray-400 uppercase">{item.role}</p>
+              <p className="mt-3 text-sm text-gray-300">{item.description}</p>
+              <Meteors number={20} />
+            </motion.div>
+          ))}
+        </motion.div>
+      </section>
+    </motion.div>
   );
 };
 
