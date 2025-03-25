@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import SocialLinks from "./SocialLinks";
 
 const Footer = () => {
   return (
@@ -81,25 +82,15 @@ const Footer = () => {
             . All Rights Reserved.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
-            {["Facebook", "Discord", "Twitter"].map((platform, index) => (
-              <motion.a
-                key={index}
-                href="#"
-                className="text-gray-400 hover:text-white ms-5"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 * index }}
-              >
-                <span className="sr-only">{platform} page</span>
-                <svg
-                  className="w-4 h-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <circle cx="10" cy="10" r="10" />
-                </svg>
-              </motion.a>
-            ))}
+            <motion.a
+              href="#"
+              className="text-gray-400 hover:text-white ms-5"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <SocialLinks />
+            </motion.a>
           </div>
         </motion.div>
       </div>
