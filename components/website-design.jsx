@@ -20,20 +20,20 @@ const WebsiteDesign = () => {
           data={{
             id: 1,
             color: "from-[#6C0400] to-[#944C00]",
-            title: "Gov. Tender & Construction E-commerce",
-            desc: "I led the creation of our e-commerce supplier portal, streamlining registration, product listing, and management of pricing and stock. I handled all frontend work, utilizing Next.js and technologies like MaterialUI and Tailwind CSS.",
-            img: "https://images.ctfassets.net/lzny33ho1g45/5VGvMMdX169JCk60IJCRDA/358a2d3f62c6028d978efc382cb83ad5/image10.png?w=1400",
-            link: "https://www.runway.org.in",
+            title: "Beyond Borders E-commerce",
+            desc: "We created this e-commerce plarfom for our client, Beyond Borders. We designed and developed the website.",
+            img: "https://i.ibb.co/Y7XgrDc3/image.png",
+            link: "https://www.beyondborders.shop/",
           }}
         />
         <ProjectCard
           data={{
             id: 1,
             color: "from-[#6C0400] to-[#944C00]",
-            title: "Gov. Tender & Construction E-commerce",
-            desc: "I led the creation of our e-commerce supplier portal, streamlining registration, product listing, and management of pricing and stock. I handled all frontend work, utilizing Next.js and technologies like MaterialUI and Tailwind CSS.",
-            img: "https://images.ctfassets.net/lzny33ho1g45/5VGvMMdX169JCk60IJCRDA/358a2d3f62c6028d978efc382cb83ad5/image10.png?w=1400",
-            link: "https://www.runway.org.in",
+            title: "Lalithya E-commerce",
+            desc: "We created this e-commerce plarfom for our client, Lalithya. We designed and developed the website. This is a brand for women's clothing.",
+            img: "https://i.ibb.co/0jm3qtvk/image.png",
+            link: "https://www.lalithya.com",
           }}
         />
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ProjectCard from "@/components/ui/projects/Card";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -62,7 +63,7 @@ export default function WebDevelopment() {
         <motion.div className="mt-8 text-center">
           <motion.a
             className="py-3 px-6 inline-block rounded-lg bg-blue-600 text-white hover:bg-blue-700"
-            href="#"
+            href="/contact"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
@@ -71,6 +72,29 @@ export default function WebDevelopment() {
           </motion.a>
         </motion.div>
       </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
+        <ProjectCard
+          data={{
+            id: 1,
+            color: "from-[#6C0400] to-[#944C00]",
+            title: "Beyond Borders E-commerce",
+            desc: "We created this e-commerce plarfom for our client, Beyond Borders. We designed and developed the website.",
+            img: "https://i.ibb.co/Y7XgrDc3/image.png",
+            link: "https://www.beyondborders.shop/",
+          }}
+        />
+        <ProjectCard
+          data={{
+            id: 1,
+            color: "from-[#6C0400] to-[#944C00]",
+            title: "Lalithya E-commerce",
+            desc: "We created this e-commerce plarfom for our client, Lalithya. We designed and developed the website. This is a brand for women's clothing.",
+            img: "https://i.ibb.co/0jm3qtvk/image.png",
+            link: "https://www.lalithya.com",
+          }}
+        />
+      </div>
     </div>
   );
 }

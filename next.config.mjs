@@ -5,6 +5,7 @@ const nextConfig = {
       "flowbite.s3.amazonaws.com",
       "images.unsplash.com",
       "static.wixstatic.com",
+      "i.ibb.co",
     ],
   },
 };

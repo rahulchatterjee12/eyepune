@@ -1,5 +1,6 @@
 "use client";
 
+import { ThreeDCardExample } from "@/components/snippets/3d-card-snippet";
 import { motion } from "framer-motion";
 
 const containerVariants = {
@@ -61,7 +62,7 @@ export default function GraphicDesign() {
         <motion.div className="mt-8 text-center">
           <motion.a
             className="py-3 px-6 inline-block rounded-lg bg-blue-600 text-white hover:bg-blue-700"
-            href="#"
+            href="/contact"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
@@ -70,6 +71,30 @@ export default function GraphicDesign() {
           </motion.a>
         </motion.div>
       </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="px-10 md:px-0 mx-8"
+        >
+          <ThreeDCardExample />
+        </motion.div>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="px-10 md:px-0 mx-8"
+        >
+          <ThreeDCardExample />
+        </motion.div>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="px-10 md:px-0 mx-8"
+        >
+          <ThreeDCardExample />
+        </motion.div>
+      </div>
     </div>
   );
 }

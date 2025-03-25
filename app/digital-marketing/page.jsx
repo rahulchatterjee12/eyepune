@@ -62,7 +62,7 @@ const Page = () => {
         <motion.div className="mt-8 text-center">
           <motion.a
             className="py-3 px-6 inline-block rounded-lg bg-blue-600 text-white hover:bg-blue-700"
-            href="#"
+            href="/contact"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
