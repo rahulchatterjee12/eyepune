@@ -14,86 +14,33 @@ const SliderOne = () => {
   const settings = {
     arrows: false,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: isSmallScreen ? 1 : isMediumScreen ? 1.67 : 3,
     autoplay: true,
     speed: 4000,
     autoplaySpeed: 1000,
     className: "w-full mx-auto cursor-pointer center-mode",
   };
 
-  if (isMediumScreen) {
-    settings.slidesToShow = 1.67;
-  } else if (isSmallScreen) {
-    settings.slidesToShow = 1;
-  }
+  const images = Array.from(
+    { length: 10 },
+    (_, i) => `/images/slider/${i + 1}.jpg`
+  );
 
   return (
     <div>
       <Slider {...settings}>
-        <>
-          <div className="rounded-md px-2 md:p-10">
+        {images.map((src, index) => (
+          <div key={index} className="rounded-md px-2 md:p-10">
             <Image
               priority
-              src="/images/business.jpeg"
-              alt="logo"
+              src={src}
+              alt={`Slide ${index + 1}`}
               width={500}
               height={500}
               className="rounded-2xl"
             />
           </div>
-        </>
-
-        <>
-          <div className="rounded-md px-2 md:p-10">
-            <Image
-              priority
-              src="/images/coffe.jpeg"
-              alt="logo"
-              width={500}
-              height={500}
-              className="rounded-2xl"
-            />
-          </div>
-        </>
-
-        <>
-          <div className="rounded-md px-2 md:p-10">
-            <Image
-              priority
-              src="/images/small-business-3.webp"
-              alt="logo"
-              width={500}
-              height={500}
-              className="rounded-2xl"
-            />
-          </div>
-        </>
-
-        <>
-          <div className="rounded-md px-2 md:p-10">
-            <Image
-              priority
-              src="/images/man.jpeg"
-              alt="logo"
-              width={500}
-              height={500}
-              className="rounded-2xl"
-            />
-          </div>
-        </>
-
-        <>
-          <div className="rounded-md px-2 md:p-10">
-            <Image
-              priority
-              src="/images/image-business.jpeg"
-              alt="logo"
-              width={500}
-              height={500}
-              className="rounded-2xl"
-            />
-          </div>
-        </>
+        ))}
       </Slider>
     </div>
   );
