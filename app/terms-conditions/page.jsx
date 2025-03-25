@@ -13,8 +13,8 @@ export default function TermsConditions() {
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">Terms & Conditions</h1>
         <p className="mb-4">
-          By accessing and using EyePune's services, you agree to the following
-          terms and conditions.
+          By accessing and using EyePune&apos;s services, you agree to the
+          following terms and conditions.
         </p>
 
         <h2 className="text-2xl font-semibold mt-6">1. Service Usage</h2>

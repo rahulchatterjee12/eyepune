@@ -89,7 +89,7 @@ export default function WebDevelopment() {
             id: 1,
             color: "from-[#6C0400] to-[#944C00]",
             title: "Lalithya E-commerce",
-            desc: "We created this e-commerce plarfom for our client, Lalithya. We designed and developed the website. This is a brand for women's clothing.",
+            desc: "We created this e-commerce plarfom for our client, Lalithya. We designed and developed the website. This is a brand for women&apos;s clothing.",
             img: "https://i.ibb.co/0jm3qtvk/image.png",
             link: "https://www.lalithya.com",
           }}
