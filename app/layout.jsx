@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 import { Spotlight } from "@/components/ui/spotlight";
 
 const font = Poppins({ subsets: ["latin"], weight: "400" });
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
           />
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   );
