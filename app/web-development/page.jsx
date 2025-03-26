@@ -93,6 +93,26 @@ export default function WebDevelopment() {
             img: "https://i.ibb.co/0jm3qtvk/image.png",
             link: "https://www.lalithya.com",
           }}
+        />{" "}
+        <ProjectCard
+          data={{
+            id: 1,
+            color: "from-[#6C0400] to-[#944C00]",
+            title: "Aecus Legal",
+            desc: "We created this website for our client, Aecus Legal. We designed and developed the website. This is a brand for legal services.",
+            img: "https://i.ibb.co/Y7YWrFCp/image.png",
+            link: "http://aecuslegal.com",
+          }}
+        />
+        <ProjectCard
+          data={{
+            id: 1,
+            color: "from-[#6C0400] to-[#944C00]",
+            title: "Shree Om Ji Saraf",
+            desc: "We created this website for our client, Shree Om Ji Saraf. We designed and developed the website. This is a brand for gold and silver.",
+            img: "https://i.ibb.co/PGKpVBBB/image.png",
+            link: "http://shreeomjisaraf.com",
+          }}
         />
       </div>
     </div>
