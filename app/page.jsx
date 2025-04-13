@@ -61,7 +61,7 @@ export default function Home() {
               whileTap="tap"
             >
               <Link
-                href="/contact"
+                href="/booking"
                 className="cursor-pointer flex items-center justify-center border rounded-full w-48 p-2 mx-auto my-6 text-white hover:bg-neutral-700 transition"
               >
                 Book a call
